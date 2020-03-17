@@ -14,18 +14,28 @@ setMentorOrLearner(){
 int op=int.parse(stdin.readLineSync());
 if(op==1)
   {
-    print('enter the available time')
+    mentors mentor;
+    print('enter the available time');
+    String exp=stdin.readLineSync();
+    print('enter the available time');
     int time=int.parse(stdin.readLineSync());
+    mentor.addStacks(exp, time);
     
-    
+  }
+else
+  {
+    tech_learners learn;
+    print('enter the interest');
+    String inter=stdin.readLineSync();
+    learn.addStacks(inter);
   }
 }
 class tech_learners
 {
   tech_learners({this.interest, });
   final interest;
-  addStacks() {
-    stack1.add(tech_learners(interest: interest));
+  addStacks(String inter) {
+    stack1.add(tech_learners(interest: inter));
   }
 }
 
